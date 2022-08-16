@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.Eyewear.service.MemberMapper">
+	
+	<resultMap type="storeVO" id="storeVO">
+		<result column="sno" property="sno"/>
+		<result column="simg" property="simg"/>
+		<result column="sname" property="sname"/>
+		<result column="ssubname" property="ssubname"/>
+		<result column="snick" property="snick"/>
+		<result column="sphone" property="sphone"/>
+		<result column="stime" property="stime"/>
+		<result column="stext" property="stext"/>
+		<result column="slat" property="slat"/>
+		<result column="slng" property="slng"/>
+	</resultMap>
+	
+	<resultMap type="reserveVO" id="reserveVO">
+		<result column="rno" property="rno"/>
+		<result column="mid" property="mid"/>
+<!-- 		<result column="sno" property="sno"/> -->
+		<result column="rtype" property="rtype"/>
+		<result column="rstaff" property="rstaff"/>
+		<result column="rage" property="rage"/>
+		<result column="rdate" property="rdate"/>
+		<result column="rtime" property="rtime"/>
+<!-- 		<collection property="storeVO" resultMap="storeVO"></collection> -->
+	</resultMap>
+
+	<resultMap type="com.Eyewear.vo.ReserveInfo" id="reserveInfo">
+		<collection property="storeVO" resultMap="storeVO" />
+		<collection property="reserveVO" resultMap="reserveVO" />
+	</resultMap>
+			
+	
+	
+	
+	
+	<!-- 로그인 -->
+	<select id="login" resultType="memberVO">
+		SELECT * FROM member WHERE mid = #{mid}
+		
+		
+<!-- 		SELECT * FROM member WHERE mid = #{mid} AND mpassword = #{mpassword} -->
+		
+	</select>
+	
+	
+	<!-- 회원가입 -->
+	<insert id="memberJoin"> 
+		INSERT INTO member (mno, mid, mpassword, mname, mgender, mphone, memail, regDate, adminCk)
+		VALUES ((SELECT IFNULL(MAX(mno) + 1, 1) FROM member CT), #{mid}, #{mpassword}, #{mname}, #{mgender}, #{mphone}, #{memail}, SYSDATE(), 0);		
+	</insert>
+	
+	<!-- 아이디 중복체크 -->
+	<select id="idCheck" resultType="int">
+		SELECT COUNT(*) FROM member WHERE mid = #{mid}
+	</select>
+	
+	
+	<!-- ID 찾기 -->
+	<select id="findId" resultType="memberVO">
+		SELECT * FROM member WHERE mname = #{mname} AND memail = #{memail}
+	</select>
+	
+	<!-- PW 찾기 -->
+	<select id="findPw" resultType="memberVO">
+		SELECT * FROM member WHERE mid = #{mid} AND  mname = #{mname} AND memail = #{memail}
+	</select>
+	
+	
+	<!-- 마이페이지 -->
+	<select id="myPage" resultType="memberVO">
+		SELECT * FROM member WHERE mid = #{mid}
+	</select>
+	
+	<!-- 마이페이지 내정보 수정 -->
+	<update id="memberUpdate" parameterType="memberVO">
+	UPDATE member
+	 SET  mpassword = #{mpassword}, 
+			mname = #{mname},
+			mgender = #{mgender}, 
+			mphone = #{mphone}
+	WHERE mid = #{mid}
+	</update>
+	
+	<!-- 마이페이지 나의 예약 관리 -->
+<!-- 	<select id="myReserveList" parameterType="reserveVO" resultType="reserveVO"> -->
+	<select id="myReserveList" parameterType="reserveVO" resultMap="reserveInfo">
+<!-- 		SELECT * FROM reserve WHERE mid = #{mid} -->
+				
+		SELECT * 
+		FROM member m, store s, reserve r 
+		WHERE s.sno = r.sno AND m.mid = r.mid
+		AND m.mid = #{mid}
+		ORDER BY rdate
+	</select>
+	
+	
+	<!-- 비밀번호 찾기에서 비밀번호 수정 -->
+	
+	<update id="editPassword" parameterType="memberVO">
+		UPDATE member
+		SET mpassword = #{mpassword} 
+		WHERE mid = #{mid} AND mname= #{mname} AND memail= #{memail}
+		
+<!-- 		UPDATE member
+			SET mpassword = #{mpassword} 
+			WHERE MID = 'ckck' AND mname= '조남규' AND memail= 'wh15312@naver.com' -->
+	</update>
+	
+</mapper>

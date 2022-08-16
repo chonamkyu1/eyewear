@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+		
+		<typeAlias alias="testVO" type="com.Eyewear.vo.TestVO" />
+		<typeAlias alias="memberVO" type="com.Eyewear.vo.MemberVO" />
+		<typeAlias alias="storeVO" type="com.Eyewear.vo.StoreVO" />
+		<typeAlias alias="reviewVO" type="com.Eyewear.vo.ReviewVO" />
+		<typeAlias alias="reserveVO" type="com.Eyewear.vo.ReserveVO" />
+		
+		
+    </typeAliases>
+</configuration>

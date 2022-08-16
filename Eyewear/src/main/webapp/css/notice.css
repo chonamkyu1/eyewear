@@ -1,0 +1,151 @@
+.width_100 {
+    width: 100% !important;
+}
+
+.column_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align_center {
+    align-item: center;
+}
+
+.font24 {
+    font-size: 24px;
+}
+.align_center {
+    align-items: center;
+}
+.weight400 {
+    font-weight: 400;
+}
+.align_center {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+
+.notice {
+    padding: 20px;
+    margin-top: 70px;
+}
+
+@media (min-width: 767.98px) {
+	.notice {
+	    margin-top: 140px;
+	    width: 960px;
+	}
+}
+
+
+.notice .card-collapse__header, .notice .card {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+@media (min-width: 767.98px) {
+	.notice .card-collapse__header, .notice .card {
+	    border: 0;
+	    border-radius: 0;
+	    margin: 0;
+	}
+}
+
+
+.notice .card-collapse__header, .notice .card {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+@media (min-width: 767.98px) {
+	.notice .card-collapse__header, .notice .card {
+	    border: 0;
+	    border-radius: 0;
+	    margin: 0;
+	}
+}
+
+.card-collapse__header {
+    padding: 0 !important;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.notice .card:first-child .card-collapse__btn {
+    border-top: solid 1px #ddd;
+}
+
+
+.notice .card-collapse__btn {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    border: 0;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 18px 0;
+    background-color: #fff;
+    border-bottom: solid 1px #ddd;
+    box-shadow: none;
+}
+
+
+@media (min-width: 767.98px) {
+	.notice .card-collapse__btn {
+	    display: flex;
+	    justify-content: space-between;
+	    font-size: 28px;
+	    padding: 36px 0;
+	}
+}
+
+
+
+.width120 {
+    width: 120px;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.notice .card-collapse__body {
+    padding: 20px 19px;
+    font-size: 11.5px;
+    line-height: 1.65;
+    color: #565a5c;
+    background-color: #f2f2f2;
+    border-bottom: solid 1px #ddd;
+}
+
+@media (min-width: 767.98px) {
+	.notice .card-collapse__body {
+	    padding: 40px 38px;
+	    font-size: 16px;
+	}
+}
+
+
+
+.card-collapse__body {
+    color: #6a687c;
+}

@@ -1,0 +1,114 @@
+.width100 {
+    width: 100% !important;
+}
+
+
+.navbar {
+	justify-content: center!important;
+    border-bottom: 1px solid #E5E5E5;
+    background-color: white;
+}
+
+.fixed-top {
+	position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+nav {
+    font-family: Akkurat, serif;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.min_width {
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+	
+a {
+    color: #5c5b5b;
+    transition: all .5s ease;
+    text-decoration: none !important;
+}
+
+nav a:hover {
+    font-family: Akkurat-Bold, serif !important;
+}
+a:hover, a:active {
+    color: #393939;
+    text-decoration: none !important;
+}
+
+.dropdown-menu-center {
+    text-align: center !important;
+    transform: translate(-35%, 0) !important;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    padding: 0;
+    border: 1px solid #E5E5E5;
+}
+
+.menu:hover .submenu {
+    display: block;
+}
+
+.submenu > li {
+    background: white;
+    display: block;
+/*     width: 100%; */
+    padding: 18px 48px;
+}
+
+ul, ol {
+    list-style: none;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+.divider90 {
+    border-top: 1px solid rgba(0, 0, 0, 0.20);
+    width: 80%;
+}
+
+.layout_reservation_btn {
+    width: 170px;
+    height: 60px;
+    background-color: #132D75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 121px;
+}

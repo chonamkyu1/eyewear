@@ -1,0 +1,321 @@
+.width_100 {
+    width: 100% !important;
+}
+
+.align_center {
+    align-item: center;
+}
+
+.align_center {
+    align-items: center;
+}
+.column_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.align_center {
+    text-align: center;
+}
+
+.font-size-42 {
+    font-size: 42px;
+}
+
+.font-size-42 {
+    font-size: 42px;
+    color: black;
+}
+.column_between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.weight400 {
+    font-weight: 400;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+.weight700 {
+    font-weight: 700!important;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame_first_img {
+    background-image: url(https://breezm.com/img/frame/frame_first.png);
+    width: 1440px;
+    height: 597px;
+    background-size: 100% 100%;
+    margin-bottom: 85px;
+}
+
+
+.frame_white_box {
+    background-color: white;
+    color: black;
+    padding: 55px 0 220px;
+}
+
+.weight500 {
+    font-weight: 500;
+}
+
+.b_hash_box {
+    width: 231px;
+    height: 64px;
+    background-color: #132D75;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 216px;
+    margin: 35px 0 68px;
+}
+
+.frame_detail_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weight300 {
+    font-weight: 300 !important;
+}
+
+.font-size-24 {
+    font-size: 24px !important;
+}
+
+.frame_white_box {
+    background-color: white;
+    color: black;
+    padding: 55px 0 220px;
+}
+
+.frame_good_box {
+    padding: 230px 0 330px;
+    background-image: url(	https://breezm.com/img/frame/frame_good_bg.png);
+    background-size: 100% 100%;
+    width: 1440px;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
+
+.font-size-16 {
+    font-size: 16px !important;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.frame_feather_pc {
+    width: 500px;
+    height: 500px;
+    background-image: url(https://breezm.com/img/frame/feather.png);
+    background-size: 100% 100%;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.font-size-40 {
+    font-size: 40px !important;
+}
+
+.frame_good_detail {
+    color: white;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.font-size-22 {
+    font-size: 22px !important;
+}
+
+.h_divider {
+    height: 155px;
+    border: 1px solid #c4c4c4;
+}
+
+.frame_glasses_pc {
+	width: 500px;
+    height: 500px;
+    background-image: url(	https://breezm.com/img/frame/glasses.png);
+    background-size: 100% 100%;
+}
+
+.frame_title_div {
+    height: 35px;
+    border: 1px solid #c4c4c4;
+    margin: 0 40px 120px 0;
+}
+
+.mb-110 {
+    margin-bottom: 110px;
+}
+
+.mb-230 {
+    margin-bottom: 230px;
+}
+
+.quality_img {
+    background-image: url(https://breezm.com/img/frame/frame_quality.png);
+}
+
+.factory_img_box {
+    width: 201px;
+    height: 201px;
+    background-size: 100% 100%;
+    margin-right: 150px;
+}
+
+.service_img {
+    background-image: url(https://breezm.com/img/frame/frame_service.png);
+}
+
+
+
+.column_normal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.eco_img {
+    background-image: url(https://breezm.com/img/frame/frame_eco.png);
+}
+
+.factory_img_box {
+    width: 201px;
+    height: 201px;
+    background-size: 100% 100%;
+    margin-right: 150px;
+}
+
+.breezm_color {
+    color: #132D75!important;
+}
+
+
+.care_box {
+    width: 1440px;
+    height: 960px;
+    background-image: url(https://breezm.com/img/frame/frame_care.png);
+    background-size: 100% 100%;
+}
+
+.mt-410 {
+    margin-top: 410px;
+}
+.care_text_box {
+    z-index: 2;
+    height: 300px;
+}
+
+.img-cover {
+    position: absolute;
+    height: 960px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.48);
+    z-index: 1;
+}
+
+.main_title_p {
+    padding: 200px 0 150px;
+}
+
+
+.slide {
+    box-shadow: 0 5px 70px -30px rgb(0 0 0 / 25%);
+}
+
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+
+
+.carousel_text_box {
+    height: 400px;
+    padding: 88px 80px 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.font-size-32 {
+    font-size: 32px !important;
+}
+
+.carousel_text_detail {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+}
+
+.carousel-control-prev {
+    height: 788px !important;
+    left: -180px !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=http…5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z/%3E%3C/svg%3E");
+}
+
+.silde_l {
+    background-image: url(https://breezm.com/img/main/slide_l.png);
+    width: 25px;
+    height: 50px;
+    background-size: 100% 100%;
+}
+
+.carousel-control-next {
+    height: 788px !important;
+    right: -180px !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=http…5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z/%3E%3C/svg%3E");
+}
+
+.slide_r {
+    background-image: url(https://breezm.com/img/main/slide_r.png);
+    width: 25px;
+    height: 50px;
+    background-size: 100% 100%;
+}

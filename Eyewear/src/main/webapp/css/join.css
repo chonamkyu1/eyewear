@@ -1,0 +1,327 @@
+.width100 {
+    width: 100% !important;
+}
+
+.column_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.font24 {
+    font-size: 24px;
+}
+
+.py-80 {
+    padding: 80px 0;
+}
+.weight400 {
+    font-weight: 400;
+}
+
+.section-form-group-modify {
+    padding: 75px 20px 32px;
+}
+.section-form-group {
+    font-size: 11px;
+    font-weight: 400;
+    color: #565a5c;
+    padding: 27px 20px 32px;
+}
+
+@media (min-width: 767.98px) {
+	.section-form-group-modify {
+	    padding: 0;
+	}
+}
+
+@media (min-width: 767.98px) {
+	.section-form-group {
+	    width: 460px;
+	    font-size: 18px;
+	    padding: 54px 40px 64px;
+	    margin: 0 auto;
+	}
+}
+
+
+html[lang|=ko] body, html[lang|=ko] .button, html[lang|=ko] input, html[lang|=ko] textarea, html[lang|=ko] select {
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "돋움", Dotum, Tahoma, Geneva, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.form-control-grey {
+    background-color: white;
+}
+
+.form-control-sm {
+    font-size: 14px !important;
+    font-weight: 300;
+    padding: 10px 11px 10.5px;
+    /* border-radius: 4px; */
+}
+
+.form-control-sm, .form-control {
+    color: #505050;
+    font-size: 16px;
+    font-weight: 300;
+    /* border-radius: 4px; */
+    height: auto;
+    letter-spacing: -.025em;
+    padding: 3px 12px 3.5px;
+    border-color: #ccc;
+    background-color: #fff;
+}
+
+.form__input {
+    z-index: 2;
+}
+
+@media (min-width: 767.98px) {
+	.form-control-sm {
+	    font-size: 16px !important;
+	    padding: 16px 15px 17px;
+	    /* border-radius: 8px; */
+	}
+	
+}
+@media (min-width: 767.98px) {
+	.form-control-sm, .form-control {
+	    font-size: 16px;
+	    border-radius: 0;
+	    padding: 24px 15px 23px;
+	}
+}
+
+.invalid-feedback_, .invalid-feedback {
+    font-size: 14px;
+}
+
+.selection_dropselect {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 767.98px) {
+	.selection_dropselect {
+	    width: 100%;
+	}
+}
+
+.section-form-group {
+    font-size: 11px;
+    font-weight: 400;
+    color: #565a5c;
+    padding: 27px 20px 32px;
+}
+
+@media (min-width: 767.98px) {
+	.section-form-group {
+	    width: 460px;
+	    font-size: 18px;
+	    padding: 54px 40px 64px;
+	    margin: 0 auto;
+	}
+}
+
+
+.selection_dropselect .dropdown-toggle {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    height: 43px;
+    font-size: 14px;
+    color: #505050;
+    line-height: 1.1;
+    cursor: pointer;
+    padding: 2px 11px 3px;
+    border-radius: 4px !important;
+    border: solid 1px #ccc;
+    text-align: left;
+    background-color: white;
+    -webkit-transition: all 150ms linear 0s;
+    transition: all 150ms linear 0s;
+}
+
+
+@media (min-width: 767.98px) {
+	.selection_dropselect .dropdown-toggle {
+	    height: 56px;
+	    font-size: 16px;
+	    padding: 4px 22px 6px;
+	    border-radius: 0 !important;
+	}
+}
+
+.selection_dropselect .dropdown-toggle::before {
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    display: block;
+    width: 18px;
+    height: 18px;
+    content: "";
+    margin-top: -9px;
+    background-image: url(https://breezm.com/css/img/selection_arr_down.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px auto;
+    -webkit-transition: all 150ms linear 0s;
+    transition: all 150ms linear 0s;
+}
+
+@media (min-width: 767.98px) {
+	.selection_dropselect .dropdown-toggle::before {
+	    right: 22px;
+	    width: 36px;
+	    height: 36px;
+	    margin-top: -19px;
+	    background-size: 22px auto;
+	}
+}
+
+.dropdown-toggle::after { 
+	display: none !important;
+}
+
+.selection_dropselect .dropdown-menu {
+    width: 100%;
+    min-width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    border: solid 1px #000000;
+    background-color: #fcfcfc;
+}
+
+
+@media (min-width: 767.98px) {
+	.selection_dropselect .dropdown-menu {
+	    border-radius: 0;
+	    width: 375px;
+	    min-width: 375px;
+	}
+}
+
+.dropdown-menu {
+    font-size: 14px;
+    padding: 25px;
+    box-shadow: none;
+}
+
+.selection_dropselect .dropdown-menu [data-selected="selected"], .selection_dropselect .dropdown-menu .dropdown-item:hover {
+    color: #000;
+    background-color: #fff;
+}
+.selection_dropselect .dropdown-menu .dropdown-item {
+    position: relative;
+    color: #565a5c;
+    font-size: 14px;
+    padding: 13px 11px;
+    border-radius: 0;
+}
+.dropdown-item {
+    color: #666;
+}
+
+@media (min-width: 767.98px){
+	.selection_dropselect .dropdown-menu .dropdown-item {
+	    font-size: 24px;
+	    padding: 16px 22px;
+	}
+}
+
+a {
+    color: #5c5b5b;
+    transition: all .5s ease;
+    text-decoration: none !important;
+}
+
+.selection_dropselect .dropdown-menu [data-selected="selected"]::after, .selection_dropselect .dropdown-menu .dropdown-item:hover::after {
+    color: #000;
+}
+.selection_dropselect .dropdown-menu .dropdown-item::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 12px;
+    margin-top: -12px;
+    background-image: none!important;
+    color: #d3d3d3;
+    font-size: 14px !important;
+    font-weight: 900;
+    text-shadow: none!important;
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+}
+
+@media (min-width: 767.98px) {
+	.selection_dropselect .dropdown-menu .dropdown-item::after {
+	    right: 24px;
+	    margin-top: -16px;
+	    font-size: 22px !important;
+	}
+}
+
+
+#mail_check_input_box_false{
+    background-color:#ebebe4;
+}
+ 
+#mail_check_input_box_true{
+    background-color:white;
+}
+
+
+
+/* .mail_check_button{ */
+/*     border: 1px solid black; */
+/*     height: 51px; */
+/*     width: 30%; */
+/*     float: right; */
+/*     line-height: 50px; */
+/*     text-align: center; */
+/*     font-size: 30px; */
+/*     font-weight: 900; */
+/*     background-color: #ececf7; */
+/*     cursor: pointer; */
+/* } */
+
+
+
+.correct {
+	color : green;
+}
+.incorrect {
+	color : red;
+}
+
+.final_id_ck{
+    display: none;
+}
+.final_pw_ck{
+    display: none;
+}
+.final_pwck_ck{
+    display: none;
+}
+.final_name_ck{
+    display: none;
+}
+.final_phone_ck{
+    display: none;
+}
+.final_mail_ck{
+    display: none;
+}
+
+.pwck_input_re_1 {
+	color: green;
+	display: none;
+}
+
+.pwck_input_re_2 {
+	color: red;
+	display: none;
+}

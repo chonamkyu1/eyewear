@@ -1,0 +1,38 @@
+.correct {
+	color : green;
+}
+.incorrect {
+	color : red;
+}
+
+.final_pw_ck{
+    display: none;
+}
+.final_pwck_ck{
+    display: none;
+}
+.final_name_ck{
+    display: none;
+}
+.final_phone_ck{
+    display: none;
+}
+.pwck_input_re_1 {
+	color: green;
+	display: none;
+}
+
+.pwck_input_re_2 {
+	color: red;
+	display: none;
+}
+
+.pwck_input_text {
+	color: red;
+	display: none;
+}
+
+.pwck_check_text {
+	color: red;
+	display: none;
+}

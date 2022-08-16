@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.Eyewear.service.ReserveMapper">
+	<select id="storeList" resultType="storeVO">
+		SELECT * FROM store
+	</select>
+	
+	<select id="detailStore" parameterType="storeVO" resultType="storeVO">
+		SELECT * FROM store WHERE snick = #{snick}
+	</select>
+	
+	
+<!-- 	SELECT rv.rvno, m.mid, s.sname, s.snick, rv.rvdate, rv.rvtext, rv.rvstar -->
+<!-- 		FROM  member m, store s, review rv -->
+<!-- 		WHERE s.sno = rv.sno AND m.mno = rv.mno -->
+<!-- 		ORDER BY rv.rvdate DESC -->
+<!-- 		LIMIT #{startList}, #{listSize} -->
+
+	<!-- 전체 목록 -->	
+	<select id="reviewList" parameterType="map" resultType="reviewVO">
+			SELECT rv.rvno, m.mid, s.sname, s.snick, rv.rvdate, rv.rvtext, rv.rvstar
+			FROM  member m, store s, review rv
+			WHERE s.sno = rv.sno AND m.mno = rv.mno
+			ORDER BY rv.rvdate DESC
+			LIMIT #{startList}, #{listSize}			
+	</select>
+	
+	<!-- 전체 리뷰 갯수 -->
+	<select id="reviewTotal"  resultType="Integer">
+		SELECT COUNT(*) AS cnt FROM review
+	</select>
+		
+	<!-- 매장별 목록 -->
+	<select id="storeReview" parameterType="map" resultType="reviewVO">
+		SELECT rv.rvno, m.mid, s.sname, s.snick, rv.rvdate, rv.rvtext, rv.rvstar
+		FROM  member m, store s, review rv
+		WHERE s.sno = rv.sno AND m.mno = rv.mno AND s.snick = '${snick}'
+		ORDER BY rv.rvdate DESC
+		LIMIT #{startList}, #{listSize} 
+	</select>
+	
+	<!-- 매장 별 리뷰 갯수 -->
+	<select id="storeTotal" parameterType="map" resultType="Integer">
+		SELECT COUNT(*) AS cnt
+		FROM  member m, store s, review rv
+		WHERE s.sno = rv.sno AND m.mno = rv.mno AND s.snick = '${snick}'
+	</select>
+	
+	
+	<!-- 예약 등록 -->
+	<insert id="reserveInsert">
+		INSERT INTO reserve (rno, sno, mid, rtype, rstaff, rage, rdate, rtime)
+		VALUES ((SELECT IFNULL(MAX(rno) + 1, 1) FROM reserve CT), #{sno}, #{mid}, #{rtype}, #{rstaff}, #{rage}, #{rdate}, '11:00');
+<!-- 		VALUES ((SELECT IFNULL(MAX(rno) + 1, 1) FROM reserve CT), #{mid}, #{rtype}, #{rstaff}, #{rage}, #{rtime}); -->
+	</insert>
+	
+	
+</mapper>
